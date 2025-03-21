@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <title>Swornima | Portfolio</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body class="bg-[#f6f6f6] text-[#333]">
+    <div
+      class="container w-3/4 flex flex-col justify-center items-center mx-auto px-4"
+    >
+      <!-- Navbar -->
+      <nav
+        class="bg-[#f6f6f6] flex justify-between items-center p-4 text-gray-500 fixed w-3/4 top-0"
+      >
+        <!-- Logo Section -->
+        <div id="logo" class="text-xl text-[#333] font-bold">
+          <a href="#top"> Swornima </a>
+        </div>
+
+        <!-- Menu (Hidden by default) -->
+        <div id="menu" class="space-x-6">
+          <!-- Close Button for Menu -->
+          <button
+            id="menuClose"
+            class="absolute top-4 right-4 text-2xl text-white"
+          >
+            <i class="fas fa-times"></i>
+          </button>
+
+          <!-- Menu Links -->
+          <a href="#gtkm" id="aboutBtn" class="hover:text-black">About</a>
+          <a href="#skills" id="skillsBtn" class="hover:text-black">Skills</a>
+          <a href="#work" id="workBtn" class="hover:text-black">Work</a>
+        </div>
+
+        <!-- CTA Button for Contact -->
+        <a
+          id="contactBtn"
+          href="#contact"
+          class="px-6 py-2 border border-solid border-black text-black rounded-full hover:bg-[#333] hover:text-[#f6f6f6] transition-all mr-6"
+        >
+          Connect
+        </a>
+
+        <!-- Hamburger Menu Button (Visible only on small screens) -->
+        <button id="menuToggle" class="p-4 sm:hidden text-2xl">
+          <i class="fas fa-bars"></i>
+        </button>
+      </nav>
+
+      <!-- Hero Section -->
+      <section
+        id="about"
+        class="about-section flex flex-col justify-center items-center pt-2 min-h-screen sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <div id="about-info" class="text-center items-center">
+          <h1 class="text-4xl font-bold">Hi, I'm Swornima!</h1>
+          <p class="text-lg text-gray-400 mt-3">
+            <span id="typing" class="text-white"></span>
+          </p>
+          <div class="flex flex-row justify-center space-x-4 mt-6 ml-1">
+            <a
+              href="https://www.instagram.com/swornimashakya_/"
+              class="social-icon fab fa-instagram"
+            ></a>
+            <a
+              href="https://www.facebook.com/swornima.shakya.9/"
+              class="social-icon fab fa-facebook-f"
+            ></a>
+            <a
+              href="https://www.linkedin.com/in/swornimashakya/"
+              class="social-icon fab fa-linkedin-in"
+            ></a>
+            <a
+              href="https://www.youtube.com/@swornimashakya3524"
+              class="social-icon fab fa-youtube"
+            ></a>
+          </div>
+          <div class="mt-6">
+            <a
+              href="#gtkm"
+              class="px-6 py-2 border border-solid border-black text-black rounded-full hover:bg-[#333] hover:text-[#f6f6f6] transition-all"
+            >
+              Learn More
+            </a>
+          </div>
+        </div>
+        <!-- <div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+            <div class="wave"></div>
+         </div> -->
+      </section>
+
+      <!-- Get to know me -->
+      <section
+        id="gtkm"
+        class="gtkm-section flex flex-col justify-center items-center text-center py-16 min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <div class="flex flex-col sm:flex-row justify-between items-center">
+          <div id="gtkm-info" class="text-left flex-1">
+            <h1 class="text-4xl font-bold">Get to know me</h1>
+            <p class="pt-8 w-full sm:w-1/2">
+              I am passionate about exploring roles where tech meets
+              leadership. With a strong foundation in event organization, I
+              thrive in environments that require problem-solving and creative
+              thinking. My peers rely on my meticulous attention to detail,
+              logical approach, and steady, patient nature. Outside academics, I
+              bring energy to the stage through dance and hosting events, adding
+              a creative touch to every experience. Eager to apply my skills in
+              IT roles that blend management and tech, I am ready to tackle new
+              challenges with focus and innovation. Excited for the
+              opportunities ahead!
+            </p>
+          </div>
+          <div id="portrait" class="flex-1 mt-8 sm:mt-0">
+            <!-- Photo -->
+            <img
+              src="img/podium.png"
+              alt="Swornima"
+              class="object-cover w-full sm:w-auto"
+            />
+          </div>
+        </div>
+      </section>
+
+      <!-- Skills Section -->
+      <section
+        id="skills"
+        class="skills-section flex flex-col justify-center items-center py-16 min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <h1 class="text-4xl font-bold">My Skills</h1>
+        <div class="flex flex-wrap justify-center space-x-0 sm:space-x-4 mt-6">
+          <div
+            class="skill-card flex flex-col items-center text-center justify-center bg-white p-8 rounded-lg shadow-lg w-full sm:w-[30%] m-4 sm:mb-0"
+          >
+            <i class="fas fa-code text-2xl text-[#333]"></i>
+            <h2 class="text-2xl font-bold mt-4">Web Development</h2>
+            <p class="text-gray-400 mt-2">
+              HTML, CSS, JavaScript, React, Node.js, Express, MongoDB
+            </p>
+          </div>
+          <div
+            class="skill-card flex flex-col items-center text-center justify-center bg-white p-8 rounded-lg shadow-lg w-full sm:w-[30%] m-4 sm:mb-0"
+          >
+            <i class="fas fa-code text-2xl text-[#333]"></i>
+            <h2 class="text-2xl font-bold mt-4">Data Science</h2>
+            <p class="text-gray-400 mt-2">
+              Python, Pandas, NumPy, Matplotlib, Seaborn, Scikit-learn
+            </p>
+          </div>
+          <div
+            class="skill-card flex flex-col items-center text-center justify-center bg-white p-8 rounded-lg shadow-lg w-full sm:w-[30%] m-4 sm:mb-0"
+          >
+            <i class="fas fa-code text-2xl text-[#333]"></i>
+            <h2 class="text-2xl font-bold mt-4">Design</h2>
+            <p class="text-gray-400 mt-2">
+                Figma, Photoshop, Illustrator, Canva
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Work Section -->
+      <section
+        id="work"
+        class="work-section flex flex-col justify-center items-center py-16 min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <h1 class="text-4xl font-bold">My Work</h1>
+        <div class="flex flex-wrap justify-center space-x-0 sm:space-x-4 mt-6">
+          <div
+            class="work-card flex flex-col items-center text-center justify-center bg-white p-8 rounded-lg shadow-lg w-full sm:w-[45%] m-4 sm:mb-0"
+          >
+            <h2 class="text-2xl font-bold mt-4">Period Tracker</h2>
+            <p class="text-gray-400 mt-2">
+                Built a simple app to track menstrual cycles and take notes for better record-keeping.
+            </p>
+          </div>
+          <div
+            class="work-card flex flex-col items-center text-center justify-center bg-white p-8 rounded-lg shadow-lg w-full sm:w-[45%] m-4 sm:mb-0"
+          >
+            <h2 class="text-2xl font-bold mt-4">
+              Employee Churn Prediction System
+            </h2>
+            <p class="text-gray-400 mt-2">
+                Developed a machine learning model to predict employee churn and identify key factors affecting attrition.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Contact Section -->
+      <section
+        id="contact"
+        class="contact-section flex flex-col justify-center items-center py-16 min-h-[300px] sm:min-h-[400px] md:min-h-[500px]"
+      >
+        <h1 class="text-4xl font-bold">Let's Connect</h1>
+        <div class="flex flex-row items-center mt-6">
+          <input
+            type="text"
+            id="name"
+            placeholder="Name"
+            class="input-field w-full bg-transparent p-1 border-b border-gray-400 focus:outline-none focus:border-black m-4"
+          />
+          <input
+            type="email"
+            id="email"
+            placeholder="Email"
+            class="input-field w-full bg-transparent p-1 border-b border-gray-400 focus:outline-none focus:border-black m-4"
+          />
+        </div>
+        <div class="flex flex-col items-center mt-6">
+          <textarea
+            id="message"
+            placeholder="Message"
+            class="input-field w-full bg-transparent border-b border-gray-400 focus:outline-none focus:border-black mb-4"
+          ></textarea>
+          <button
+            id="sendMessageBtn"
+            class="px-6 py-2 mt-6 border border-solid border-black text-black rounded-full hover:bg-[#333] hover:text-[#f6f6f6] transition-all"
+          >
+            Send Message
+          </button>
+        </div>
+      </section>
+
+      <!-- Footer Section -->
+      <footer class="footer-section flex flex-col items-center py-4 text-sm">
+        <p>&copy; 2021 Swornima. All rights reserved.</p>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
