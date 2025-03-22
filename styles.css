@@ -14,6 +14,17 @@ h1 {
   transition: opacity 0.2s ease-in-out;
 }
 
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  border: 0;
+}
+
 nav a,
 #typing,
 #aboutBtn,
@@ -52,6 +63,8 @@ nav a,
 .work-card:hover {
   transform: scale(1.05);
   transition: transform 0.2s ease-in-out;
+  cursor: pointer;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
 }
 
 nav a:last-child {
@@ -151,13 +164,26 @@ nav a:last-child {
   #menu.active + #menuToggle {
     display: none; /* Ensure it is hidden when the menu is active */
   }
+
+  #gtkm {
+    background-image: none; /* Remove the background image */
+  }
+  #gtkm .flex-col {
+    flex-direction: column; /* Stack description and image vertically */
+  }
+
+  #gtkm-info {
+    margin-bottom: 1rem; /* Add spacing between description and image */
+    text-align: center;
+  }
 }
 
 /* Media Query for Large Screens (min-width: 1024px) */
 @media (min-width: 1024px) {
-  /* nav {
-    background-color: rgb(246, 246, 246, 0.4);
-  } */
+  nav {
+    /* background-color: rgb(246, 246, 246, 0.4); */
+    z-index: 999;
+  }
 
   section {
     height: 100vh;
@@ -192,28 +218,24 @@ nav a:last-child {
   #menuToggle {
     display: none; /* Hide the menu toggle icon for larger screens */
   }
+
+  #portrait img {
+    display: none; /* Remove the background image */
 }
 
-@media (max-width: 640px) {
+/* @media (max-width: 640px) {
   
   #gtkm {
-    background-image: none; /* Remove the background image */
+    background-image: none;
   }
   #gtkm .flex-col {
-    flex-direction: column; /* Stack description and image vertically */
+    flex-direction: column;
   }
 
   #gtkm-info {
-    margin-bottom: 1rem; /* Add spacing between description and image */
+    margin-bottom: 1rem;
   }
-}
-
-@media (min-width: 640px) {
-  
-  #portrait img {
-    display: none; /* Remove the background image */
-  }
-}
+} */
 
 /* body {
   margin: auto;

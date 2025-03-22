@@ -102,71 +102,71 @@ document.addEventListener("DOMContentLoaded", () => {
   });
 });
 
-// Function to detect scroll and navigate to the next section
-if (window.innerWidth >= 1024) { // Only apply to large screens
-  const sections = Array.from(document.querySelectorAll("section")); // Ensure sections are in an array
-  let currentIndex = 0;
-  let isScrolling = false; // Prevent multiple scroll events during transition
+// // Function to detect scroll and navigate to the next section
+// if (window.innerWidth >= 1024) { // Only apply to large screens
+//   const sections = Array.from(document.querySelectorAll("section")); // Ensure sections are in an array
+//   let currentIndex = 0;
+//   let isScrolling = false; // Prevent multiple scroll events during transition
 
-  // Scroll to the next or previous section
-  function scrollToSection(index) {
-    if (index >= 0 && index < sections.length) {
-      isScrolling = true;
-      sections[index].scrollIntoView({ behavior: "smooth" });
-      currentIndex = index;
+//   // Scroll to the next or previous section
+//   function scrollToSection(index) {
+//     if (index >= 0 && index < sections.length) {
+//       isScrolling = true;
+//       sections[index].scrollIntoView({ behavior: "smooth" });
+//       currentIndex = index;
 
-      // Add a delay to prevent rapid scrolling
-      setTimeout(() => {
-        isScrolling = false;
-      }, 1000); // Adjust delay as needed (1000ms = 1 second)
-    }
-  }
+//       // Add a delay to prevent rapid scrolling
+//       setTimeout(() => {
+//         isScrolling = false;
+//       }, 1000); // Adjust delay as needed (1000ms = 1 second)
+//     }
+//   }
 
-  // Listen for wheel scroll event
-  window.addEventListener("wheel", (event) => {
-    if (!isScrolling) {
-      if (event.deltaY > 0) {
-        // Scroll down
-        if (currentIndex < sections.length - 1) {
-          scrollToSection(currentIndex + 1);
-        }
-      } else {
-        // Scroll up
-        if (currentIndex > 0) {
-          scrollToSection(currentIndex - 1);
-        }
-      }
-    }
-  });
+//   // Listen for wheel scroll event
+//   window.addEventListener("wheel", (event) => {
+//     if (!isScrolling) {
+//       if (event.deltaY > 0) {
+//         // Scroll down
+//         if (currentIndex < sections.length - 1) {
+//           scrollToSection(currentIndex + 1);
+//         }
+//       } else {
+//         // Scroll up
+//         if (currentIndex > 0) {
+//           scrollToSection(currentIndex - 1);
+//         }
+//       }
+//     }
+//   });
 
-  // Listen for keyboard arrow keys
-  window.addEventListener("keydown", (event) => {
-    if (!isScrolling) {
-      if (event.key === "ArrowDown") {
-        if (currentIndex < sections.length - 1) {
-          scrollToSection(currentIndex + 1);
-        }
-      } else if (event.key === "ArrowUp") {
-        if (currentIndex > 0) {
-          scrollToSection(currentIndex - 1);
-        }
-      }
-    }
-  });
+//   // Listen for keyboard arrow keys
+//   window.addEventListener("keydown", (event) => {
+//     if (!isScrolling) {
+//       if (event.key === "ArrowDown") {
+//         if (currentIndex < sections.length - 1) {
+//           scrollToSection(currentIndex + 1);
+//         }
+//       } else if (event.key === "ArrowUp") {
+//         if (currentIndex > 0) {
+//           scrollToSection(currentIndex - 1);
+//         }
+//       }
+//     }
+//   });
 
-  // Update currentIndex on page load to match the visible section
-  window.addEventListener("load", () => {
-    const scrollPosition = window.scrollY;
-    sections.forEach((section, index) => {
-      if (
-        scrollPosition >= section.offsetTop &&
-        scrollPosition < section.offsetTop + section.offsetHeight
-      ) {
-        currentIndex = index;
-      }
-    });
-  });
-}
+//   // Update currentIndex on page load to match the visible section
+//   window.addEventListener("load", () => {
+//     const scrollPosition = window.scrollY;
+//     sections.forEach((section, index) => {
+//       if (
+//         scrollPosition >= section.offsetTop &&
+//         scrollPosition < section.offsetTop + section.offsetHeight
+//       ) {
+//         currentIndex = index;
+//       }
+//     });
+//   });
+// }
 
 // Initialize EmailJS
 (function () {
